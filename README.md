@@ -1,4 +1,4 @@
-## Deployment and Configuration of Ubuntu Virtual Machines with Vagrant## 
+## Deployment and Configuration of Ubuntu Virtual Machines with Vagrant
 
 ## Introduction
 
@@ -9,7 +9,6 @@ This repository contains a Bash script designed to automate the deployment and c
 - [Requirements](#requirements)
 - [Project Overview](#project-overview)
 - [Usage Instructions](#usage-instructions)
-- [Customization](#customisation)
 
 ## Requirements
 To deploy the LAMP stack with load balancing project using Vagrant, you'll need the following:

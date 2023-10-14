@@ -45,30 +45,6 @@ vagrant ssh slave -c "sudo mysql_secure_installation"
 vagrant ssh master -c "echo '<?php phpinfo(); ?>' | sudo tee /var/www/html/info.php"
 vagrant ssh slave -c "echo '<?php phpinfo(); ?>' | sudo tee /var/www/html/info.php"
 
-
-# Install Nginx on the Master node (for load balancing)
-vagrant ssh master -c "sudo apt install -y nginx"
-
-# Configure Nginx for load balancing
-cat <<EOF > nginx-load-balancer.conf
-http {
-    upstream backend {
-        server master;
-        server slave;
-    }
-    
-    server {
-        listen 80;
-        location / {
-            proxy_pass http://backend;
-        }
-    }
-}
-EOF
-
-vagrant ssh master -c "sudo mv /vagrant/nginx-load-balancer.conf /etc/nginx/nginx.conf"
-vagrant ssh master -c "sudo systemctl restart nginx"
-
 # Cleanup - Remove the master_public_key file
 vagrant ssh master -c "rm /vagrant/master_public_key"
 

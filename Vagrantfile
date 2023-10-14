@@ -15,9 +15,6 @@ Vagrant.configure("2") do |config|
     
     # Share an additional folder to the guest VM.
     config.vm.synced_folder ".", "/vagrant"
-    
-    # Provision the Master node using the 'provision-master.sh' script
-    # master.vm.provision "shell", path: "provision-master.sh"
   end
 
   # Configuration for the Slave node
@@ -25,8 +22,5 @@ Vagrant.configure("2") do |config|
     slave.vm.box = "ubuntu/focal64"
     slave.vm.hostname = "slave"
     slave.vm.network "private_network", ip: "192.168.56.6"
-    
-    # Provision the Slave node using the 'provision-slave.sh' script
-    # slave.vm.provision "shell", path: "provision.sh"
   end
 end
