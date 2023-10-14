@@ -27,7 +27,7 @@ vagrant ssh master -c "top"
 
 #Install LAMP Stack on both nodes
 vagrant ssh master -c "sudo apt update"
-vagrant ssh master -c "sudo apt install -y apache2 mysql-server php libapache2-mod-php"
+vagrant ssh master -c "sudo apt install -y net-tools apache2 mysql-server php libapache2-mod-php"
 
 vagrant ssh slave -c "sudo apt update"
 vagrant ssh slave -c "sudo apt install -y apache2 mysql-server php libapache2-mod-php"
