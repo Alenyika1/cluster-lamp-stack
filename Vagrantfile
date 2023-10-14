@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
     # config.vm.provision "file", source: "C:\\Users\\USER\\.ssh\\id_rsa.pub", destination: "/home/vagrant/.ssh/authorized_keys"
     
     # Share an additional folder to the guest VM.
-    # config.vm.synced_folder ".", "/vagrant"
+    config.vm.synced_folder ".", "/vagrant"
     
     # Provision the Master node using the 'provision-master.sh' script
     # master.vm.provision "shell", path: "provision-master.sh"
