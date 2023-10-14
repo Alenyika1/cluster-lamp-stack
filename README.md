@@ -48,13 +48,19 @@ To deploy the LAMP stack with load balancing project using Vagrant, you'll need 
 - Data Transfer:
    - Copies essential data and the SSH public key from the "master" to the "slave" virtual machine.
    - Facilitates data synchronization between the two virtual machines.
+- Data Transfer:
+   - Copies essential data and the SSH public key from the "master" to the "slave" virtual machine.
+   - Facilitates data synchronization between the two virtual machines.
 
+- LAMP Stack Installation:
 - LAMP Stack Installation:
    - Installs Apache, MySQL, and PHP on both the "master" and "slave" virtual machines.
 
 - Apache and MySQL Configuration:
    - Enables and secures Apache and MySQL on both virtual machines, including the use of the `mysql_secure_installation` script.
 
+- Testing the LAMP Setup: 
+   - Creates a PHP info file within the web directory on both virtual machines, serving as a verification of the LAMP stack configuration.
 - Testing the LAMP Setup: 
    - Creates a PHP info file within the web directory on both virtual machines, serving as a verification of the LAMP stack configuration.
 
@@ -72,4 +78,5 @@ To deploy the LAMP stack with load balancing project using Vagrant, you'll need 
    ./lamp-stack.sh
    ```
 
+Please keep in mind that this script forms the foundation for creating a basic LAMP stack and setting up Nginx for load balancing. It can be tailored to meet your specific needs and security considerations. Exercise due caution when executing scripts that modify system configurations, and always ensure you have the appropriate permissions for the operations being performed.
 Please keep in mind that this script forms the foundation for creating a basic LAMP stack and setting up Nginx for load balancing. It can be tailored to meet your specific needs and security considerations. Exercise due caution when executing scripts that modify system configurations, and always ensure you have the appropriate permissions for the operations being performed.
