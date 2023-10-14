@@ -43,7 +43,9 @@ To deploy the LAMP stack with load balancing project using Vagrant, you'll need 
 
 - User and SSH Key Setup:
    - Creates a user account called "altschool" on the "master" virtual machine, granting it sudo privileges.
+   ![Altschool User](./Screenshot/altschool.png)
    - Establishes SSH key-based authentication from the "master" to the "slave" virtual machine.
+   ![ssh-key-setup](./Screenshot/ssh-key.png)
 
 - Data Transfer:
    - Copies essential data and the SSH public key from the "master" to the "slave" virtual machine.
@@ -74,9 +76,4 @@ To deploy the LAMP stack with load balancing project using Vagrant, you'll need 
 2. Clone this repository to your local system.
 3. Run the Bash script to deploy and configure the virtual machines:
 
-   ```bash
-   ./lamp-stack.sh
-   ```
-
-Please keep in mind that this script forms the foundation for creating a basic LAMP stack and setting up Nginx for load balancing. It can be tailored to meet your specific needs and security considerations. Exercise due caution when executing scripts that modify system configurations, and always ensure you have the appropriate permissions for the operations being performed.
-Please keep in mind that this script forms the foundation for creating a basic LAMP stack and setting up Nginx for load balancing. It can be tailored to meet your specific needs and security considerations. Exercise due caution when executing scripts that modify system configurations, and always ensure you have the appropriate permissions for the operations being performed.
+![Usage Instruction](./cluster-lamp-stack/screenshot/lamp-stack.png)
